@@ -8,6 +8,10 @@ export async function GET(request: any) {
         const response = await fetch(`https://www.converse.com/shop/womens-shoes?srule=Featured&start=35&sz=60`, { cache: "no-cache" })
         const html = await response.text()
         console.log("/api/scrap : cherio load")
+
+        console.log(html)
+
+        console.log("/api/scrap : cherio load")
         const $ = cheerio.load(html);
 
         const shoeTitle: any = [];
